@@ -1,7 +1,15 @@
 return {
   {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    enabled = false,
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "catppuccin/nvim",
     name = "catppuccin",
+    enabled = true,
     opts = {
       term_colors = false,
       transparent_background = true,
@@ -18,12 +26,44 @@ return {
         properties = {},
         types = {},
       },
+      integrations = {
+        telescope = {
+          enabled = true,
+          style = "nvchad",
+        },
+        dropbar = {
+          enabled = true,
+          color_mode = true,
+        },
+      },
       color_overrides = {
         mocha = {
-          base = "#080808",
+          text = "#cfcfcf",
+          base = "#000000",
+          crust = "#000000",
           mantle = "#151515",
-          crust = "#ffffff",
+          -- surface0 = "#3e4451",
+          -- surface1 = "#545862",
+          -- surface2 = "#565c64",
+
+          rosewater = "#b6bdca",
+          lavender = "#a4c6fc",
           red = "#fa5252",
+          -- green = "#6bfa9b",
+          blue = "#7893ff",
+          -- yellow = "#fcf562",
+
+          maroon = "#d46c75",
+          -- sky = "#d19a66",
+
+          pink = "#F5C2E7",
+          sapphire = "#74C7EC",
+
+          subtext1 = "#BAC2DE",
+          subtext0 = "#A6ADC8",
+          overlay2 = "#9399B2",
+          overlay1 = "#7F849C",
+          overlay0 = "#6C7086",
         },
       },
       highlight_overrides = {
@@ -98,6 +138,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
+      -- colorscheme = "moonfly",
     },
   },
 }
