@@ -9,8 +9,10 @@ return {
       opts = {}, -- global options for the cmdline. See section on views
     },
     messages = {
-      enabled = false,
+      view = "mini",
+      enabled = true,
     },
+    views = {},
     lsp = {
       progress = {
         enabled = true,

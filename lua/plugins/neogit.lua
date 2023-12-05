@@ -23,12 +23,12 @@ return {
     -- If enabled, uses fzf-lua for menu selection. If the telescope integration
     -- is also selected then telescope is used instead
     -- Requires you to have `ibhagwan/fzf-lua` installed.
-    fzf_lua = false,
+    fzf_lua = nil,
   },
-  branch = "nightly",
+  -- branch = "nightly",
   config = true,
   keys = {
     { "<leader>gn", "<cmd>Neogit<cr>", desc = "Neogit" },
-    { "<leader>gd", "<cmd>Neogit<cr>", desc = "Neogit" },
+    { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "Diffview open" },
   },
 }

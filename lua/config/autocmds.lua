@@ -1,5 +1,15 @@
 require("config/commands")
 
+-- vim.highlight.create("NeogitDiffContextHighlight", { guifg = "#eeeeee" })
+-- vim.api.nvim_set_hl(0, "NeogitDiffContextHighlight", { guifg = "#eeeeee" })
+
+vim.cmd([[
+   augroup ColorSchemeOverride
+   au!
+   au ColorScheme *
+   \ highlight! NeogitDiffContextHighlight guifg=#dddddd guibg=#151515
+]])
+
 -- vim.cmd([[
 --    augroup ColorSchemeOverride
 --    au!
