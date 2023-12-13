@@ -8,6 +8,8 @@ vim.cmd([[
    au!
    au ColorScheme *
    \ highlight! NeogitDiffContextHighlight guifg=#dddddd guibg=#151515
+   \| highlight! FloatBorder guifg=#ffffff
+   " \| highlight! NormalFloat guibg=#4f4f4f
 ]])
 
 -- vim.cmd([[

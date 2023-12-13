@@ -2,6 +2,9 @@ return {
   "neovim/nvim-lspconfig",
   -- event = { "BufReadPre", "BufNewFile" },
   opts = {
+    ui = {
+      border = "rounded",
+    },
     diagnostics = {
       underline = true,
       update_in_insert = false,
@@ -9,6 +12,10 @@ return {
         prefix = "icons",
       },
       severity_sort = true,
+      float = {
+        border = "rounded",
+        source = "always",
+      },
     },
     inlay_hints = {
       enabled = true,
@@ -59,6 +66,9 @@ return {
           ["rust-analyzer"] = {
             cargo = {
               autoreload = false,
+            },
+            procMacro = {
+              enable = true,
             },
           },
         },

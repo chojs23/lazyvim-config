@@ -11,6 +11,7 @@ return {
     name = "catppuccin",
     enabled = true,
     opts = {
+      floating_border = "on",
       term_colors = false,
       transparent_background = true,
       styles = {
@@ -69,6 +70,7 @@ return {
       highlight_overrides = {
         all = function(colors)
           return {
+            WinSeparator = { fg = colors.text },
             TSVariable = { fg = colors.text },
             TSVariableBuiltin = { fg = colors.mauve },
             ["@variable"] = { link = "TSVariable" },
@@ -138,7 +140,6 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
-      -- colorscheme = "moonfly",
     },
   },
 }
