@@ -21,6 +21,9 @@ vim.keymap.set("i", "<F1>", "")
 
 vim.keymap.set("i", "<ESC>", "<ESC>l")
 
+-- Netrw
+vim.keymap.set("n", "<C-n>", ":Explore<CR>", { silent = true })
+
 -- Resize window using <ctrl> arrow keys
 -- map("n", "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 -- map("n", "<C-S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
