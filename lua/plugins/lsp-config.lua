@@ -58,10 +58,6 @@ return {
         },
       },
       rust_analyzer = {
-        on_attach = function(client, bufnr)
-          vim.lsp.inlay_hint(bufnr, false)
-        end,
-        -- cmd = { "/Users/neo/.cargo/bin/rust-analyzer" },
         settings = {
           ["rust-analyzer"] = {
             cargo = {
@@ -69,6 +65,9 @@ return {
             },
             procMacro = {
               enable = true,
+            },
+            inlayHints = {
+              enable = false,
             },
           },
         },
