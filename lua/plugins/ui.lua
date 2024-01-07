@@ -10,7 +10,7 @@ return {
         opts = {}, -- global options for the cmdline. See section on views
       },
       messages = {
-        view = "mini",
+        view = "cmdline_output",
         enabled = true,
       },
       presets = {
