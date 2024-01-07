@@ -133,4 +133,7 @@ return {
   {
     "mg979/vim-visual-multi",
   },
+  {
+    "norcalli/nvim-colorizer.lua",
+  },
 }

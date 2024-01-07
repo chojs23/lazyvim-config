@@ -7,18 +7,34 @@ return {
       cmdline = {
         enabled = true, -- enables the Noice cmdline UI
         view = "cmdline", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
-        opts = {}, -- global options for the cmdline. See section on views
       },
       messages = {
-        view = "messages",
         enabled = true,
+        view = "notify", -- default view for messages
+        view_error = "notify", -- view for errors
+        view_warn = "notify", -- view for warnings
+        view_history = "messages", -- view for :messages
+        view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
       },
       presets = {
         bottom_search = true,
         command_palette = false,
         long_message_to_split = true,
-        inc_rename = true,
+        inc_rename = false,
         lsp_doc_border = true,
+      },
+      -- https://github.com/folke/noice.nvim/blob/main/lua/noice/config/views.lua
+      views = {
+        notify = {
+          replace = true,
+        },
+        mini = {
+          position = {
+            row = -1,
+            -- col = "100%",
+            col = 0,
+          },
+        },
       },
     },
   -- stylua: ignore
@@ -36,9 +52,10 @@ return {
     "rcarriga/nvim-notify",
     config = function()
       require("notify").setup({
-        stages = "fade_in_slide_out",
-        timeout = 3000,
-        background_colour = "#000000",
+        stages = "slide",
+        top_down = false,
+        timeout = 2000,
+        background_colour = "#242424",
       })
     end,
   },

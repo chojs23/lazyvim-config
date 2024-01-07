@@ -41,11 +41,6 @@ function M.config()
     fold_virt_text_handler = handler,
     open_fold_hl_timeout = 500,
     preview = {
-      -- win_config = {
-      --   border = { "", "─", "", "", "", "─", "", "" },
-      --   winhighlight = "Normal:Folded",
-      --   winblend = 0,
-      -- },
       mappings = {
         scrollU = "<C-u>",
         scrollD = "<C-d>",

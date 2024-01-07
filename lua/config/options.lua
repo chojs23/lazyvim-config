@@ -52,6 +52,11 @@ opt.guicursor = ""
 opt.guicursor = "a:blinkwait0-blinkon400-blinkoff250"
 opt.swapfile = false
 
+opt.foldcolumn = "1" -- '0' is not bad
+opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+opt.foldlevelstart = 99
+opt.foldenable = true
+
 if vim.fn.has("nvim-0.9.0") == 1 then
   opt.splitkeep = "screen"
   opt.shortmess:append({ C = true })
