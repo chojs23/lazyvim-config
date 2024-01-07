@@ -1,10 +1,12 @@
 return {
   {
-    "bluz71/vim-moonfly-colors",
-    name = "moonfly",
-    enabled = false,
-    lazy = false,
-    priority = 1000,
+    "rose-pine/neovim",
+    as = "rose-pine",
+    opts = {
+      variant = "main",
+      dark_variant = "main",
+      disable_italics = true,
+    },
   },
   {
     "catppuccin/nvim",
