@@ -58,6 +58,9 @@ return {
         },
       },
       rust_analyzer = {
+        on_attach = function(bufnr, client)
+          vim.lsp.inlay_hint.enable(0, false)
+        end,
         settings = {
           ["rust-analyzer"] = {
             cargo = {
