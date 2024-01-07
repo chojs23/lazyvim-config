@@ -1,14 +1,5 @@
 return {
   {
-    "rose-pine/neovim",
-    as = "rose-pine",
-    opts = {
-      variant = "main",
-      dark_variant = "main",
-      disable_italics = true,
-    },
-  },
-  {
     "catppuccin/nvim",
     name = "catppuccin",
     enabled = true,
