@@ -4,9 +4,8 @@ return {
     name = "catppuccin",
     enabled = true,
     opts = {
-      floating_border = "on",
-      term_colors = false,
-      transparent_background = false,
+      -- term_colors = false,
+      -- transparent_background = true,
       styles = {
         comments = {},
         conditionals = {},
@@ -33,7 +32,7 @@ return {
       color_overrides = {
         mocha = {
           text = "#cfcfcf",
-          base = "#1a1a1a",
+          base = "#161616",
           crust = "#000000",
           mantle = "#151515",
           -- surface0 = "#3e4451",

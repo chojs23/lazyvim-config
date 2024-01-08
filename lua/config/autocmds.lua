@@ -11,6 +11,8 @@ vim.cmd([[
    \| highlight! FloatBorder guifg=#ffffff
    \| highlight! LineNr guifg=#4d4d4d guibg=#242424
    \| highlight! TreesitterContext guibg=#242424
+   \| highlight! TelescopeBorder guifg=#ffffff
+   \| highlight! TelescopePromptBorder guifg=#ffffff
 ]])
 
 -- vim.cmd([[
