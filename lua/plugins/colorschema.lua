@@ -6,7 +6,7 @@ return {
     opts = {
       floating_border = "on",
       term_colors = false,
-      transparent_background = true,
+      transparent_background = false,
       styles = {
         comments = {},
         conditionals = {},
@@ -33,7 +33,7 @@ return {
       color_overrides = {
         mocha = {
           text = "#cfcfcf",
-          base = "#000000",
+          base = "#1a1a1a",
           crust = "#000000",
           mantle = "#151515",
           -- surface0 = "#3e4451",
