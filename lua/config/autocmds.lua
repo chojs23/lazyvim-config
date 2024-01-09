@@ -8,13 +8,13 @@ vim.cmd([[
    au!
    au ColorScheme *
    \ highlight! NeogitDiffContextHighlight guifg=#dddddd guibg=#151515
-   \| highlight! Visual guibg=#303030
-   \| highlight! CursorLine guibg=#191919
+   \| highlight! Visual guibg=#323232
+   \| highlight! CursorLine guibg=#1e1e1e
    \| highlight! PmenuSel guibg=#1a1a1a
    \| highlight! FloatBorder guifg=#ffffff
    \| highlight! LineNr guibg=#202020
    \| highlight! TreesitterContext guibg=#202020
-   \| highlight! LspInlayHint guifg=#7d8299 guibg=#242424
+   \| highlight! LspInlayHint guifg=#7d8299 guibg=#262626
    \| highlight! TelescopeBorder guifg=#ffffff
    \| highlight! TelescopePromptBorder guifg=#ffffff
    \| highlight! TelescopePromptBorder guifg=#ffffff
