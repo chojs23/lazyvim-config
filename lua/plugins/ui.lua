@@ -52,7 +52,7 @@ return {
     "rcarriga/nvim-notify",
     config = function()
       require("notify").setup({
-        stages = "slide",
+        stages = "static",
         top_down = false,
         timeout = 2000,
         background_colour = "#242424",
