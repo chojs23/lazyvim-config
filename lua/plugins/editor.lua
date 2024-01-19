@@ -59,4 +59,10 @@ return {
       },
     },
   },
+  {
+    "mbbill/undotree",
+    keys = {
+      { "<leader>gt", "<cmd>UndotreeToggle<cr>", desc = "Undotree" },
+    },
+  },
 }
