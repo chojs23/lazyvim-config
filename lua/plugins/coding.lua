@@ -31,6 +31,9 @@ return {
     },
   },
   {
+    "sindrets/diffview.nvim",
+  },
+  {
     "NeogitOrg/neogit",
     dependencies = {
       "nvim-lua/plenary.nvim", -- required
@@ -57,6 +60,14 @@ return {
         -- Requires you to have `ibhagwan/fzf-lua` installed.
         fzf_lua = nil,
       },
+      mappings = {
+        finder = {
+          ["<tab>"] = "Next",
+          ["<s-tab>"] = "Previous",
+          ["<down>"] = "MultiselectToggleNext",
+          ["<up>"] = "MultiselectTogglePrevious",
+        },
+      },
     },
     -- branch = "nightly",
     keys = {
@@ -70,7 +81,7 @@ return {
     enabled = true,
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    keys = { { "-", "<cmd>Oil<cr>", desc = "Open parent directory" } },
+    keys = { { "<F2>", "<cmd>Oil<cr>", desc = "Open parent directory" } },
   },
   {
     "andweeb/presence.nvim",
