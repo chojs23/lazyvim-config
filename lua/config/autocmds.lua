@@ -10,14 +10,15 @@ vim.cmd([[
    \ highlight! NeogitDiffContextHighlight guifg=#dddddd guibg=#151515
    \| highlight! Visual guibg=#323232
    \| highlight! CursorLine guibg=#1e1e1e
-   \| highlight! PmenuSel guibg=#1a1a1a
+   \| highlight! Pmenu guibg=#333333
+   \| highlight! PmenuSel guibg=#171717
    \| highlight! FloatBorder guifg=#ffffff
    \| highlight! LineNr guibg=#202020
    \| highlight! TreesitterContext guibg=#202020
    \| highlight! LspInlayHint guifg=#7d8299 guibg=#262626
    \| highlight! TelescopeBorder guifg=#ffffff
    \| highlight! TelescopePromptBorder guifg=#ffffff
-   \| highlight! TelescopePromptBorder guifg=#ffffff
+   " \| highlight! TelescopeNormal guibg=#3d3d3d
 ]])
 
 vim.cmd([[

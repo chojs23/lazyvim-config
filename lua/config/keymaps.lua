@@ -21,8 +21,8 @@ vim.keymap.set("i", "<F1>", "")
 
 vim.keymap.set("i", "<ESC>", "<ESC>l")
 
--- Netrw
-vim.keymap.set("n", "<leader>n", ":Explore<CR>", { silent = true })
+-- NeoTree postion current
+vim.keymap.set("n", "<leader>n", ":Neotree position=current<CR>", { silent = true })
 
 -- Resize window using <ctrl> arrow keys
 -- map("n", "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })

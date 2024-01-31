@@ -1,6 +1,7 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    tag = "3.14",
     opts = {
       filesystem = {
         bind_to_cwd = false,
@@ -20,9 +21,18 @@ return {
       },
       window = {
         position = "left",
-        width = 30,
+        width = 25,
         mappings = {
           ["<space>"] = "none",
+        },
+      },
+      default_component_configs = {
+        file_size = {
+          enabled = true,
+          required_width = 35, -- min width of window required to show this column
+        },
+        symlink_target = {
+          enabled = true,
         },
       },
     },
@@ -53,7 +63,7 @@ return {
       current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
       current_line_blame_opts = {
         virt_text = true,
-        virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+        virt_text_pos = "right_align", -- 'eol' | 'overlay' | 'right_align'
         delay = 200,
         ignore_whitespace = false,
       },

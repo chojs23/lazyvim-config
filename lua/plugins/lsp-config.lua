@@ -2,9 +2,6 @@ return {
   "neovim/nvim-lspconfig",
   -- event = { "BufReadPre", "BufNewFile" },
   opts = {
-    ui = {
-      border = "rounded",
-    },
     diagnostics = {
       underline = true,
       update_in_insert = false,
