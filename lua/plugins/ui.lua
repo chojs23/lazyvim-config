@@ -111,17 +111,19 @@ return {
         end,
       }
 
-      ins_left({
-        -- filesize component
-        "filesize",
-        cond = conditions.buffer_not_empty,
-      })
+      -- ins_left({
+      --   -- filesize component
+      --   "filesize",
+      --   cond = conditions.buffer_not_empty,
+      -- })
 
       table.insert(opts.sections.lualine_x, 1, {
         function()
           local msg = "No Active Lsp"
-          local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-          local clients = vim.lsp.get_active_clients()
+          local buf_ft = vim.api.nvim_get_option_value("filetype", {
+            buf = 0,
+          })
+          local clients = vim.lsp.get_clients()
           if next(clients) == nil then
             return msg
           end
@@ -133,20 +135,20 @@ return {
           end
           return msg
         end,
-        icon = " LSP:",
+        -- icon = " LSP:",
         color = { fg = "#ffffff", gui = "bold" },
       })
 
       ins_right({
-        "o:encoding", -- option component same as &encoding in viml
-        fmt = string.upper, -- I'm not sure why it's upper case either ;)
+        "o:encoding",
+        fmt = string.upper,
         cond = conditions.hide_in_width,
         color = { fg = colors.green, gui = "bold" },
       })
       ins_right({
         "fileformat",
         fmt = string.upper,
-        icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+        icons_enabled = true,
         color = { fg = colors.green, gui = "bold" },
       })
 

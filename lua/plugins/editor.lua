@@ -27,10 +27,6 @@ return {
         },
       },
       default_component_configs = {
-        file_size = {
-          enabled = true,
-          required_width = 35, -- min width of window required to show this column
-        },
         symlink_target = {
           enabled = true,
         },
@@ -42,6 +38,21 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       height = 8,
+    },
+  },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {
+      mode = "fuzzy",
+      modes = {
+        search = {
+          enabled = false,
+        },
+        char = {
+          keys = { "f", "F" },
+        },
+      },
     },
   },
   {
