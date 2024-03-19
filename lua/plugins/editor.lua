@@ -1,7 +1,6 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
-    tag = "3.14",
     opts = {
       filesystem = {
         bind_to_cwd = false,
