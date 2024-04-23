@@ -69,7 +69,7 @@ return {
         },
       },
     },
-    -- branch = "nightly",
+    branch = "nightly",
     keys = {
       { "<leader>gn", "<cmd>Neogit<cr>", desc = "Neogit" },
       { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "Diffview open" },
@@ -77,11 +77,22 @@ return {
   },
   {
     "stevearc/oil.nvim",
-    opts = {},
+    opts = {
+      keymaps = {
+        ["<leader>o"] = "actions.close",
+        ["-"] = "actions.parent",
+        ["_"] = "actions.open_cwd",
+        ["`"] = "actions.cd",
+        ["~"] = "actions.tcd",
+      },
+      view_options = {
+        show_hidden = true,
+      },
+    },
     enabled = true,
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    keys = { { "<F2>", "<cmd>Oil<cr>", desc = "Open parent directory" } },
+    keys = { { "<leader>o", "<cmd>Oil<cr>", desc = "Open parent directory" } },
   },
   {
     "andweeb/presence.nvim",
