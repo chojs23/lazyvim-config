@@ -31,6 +31,7 @@ return {
       },
       color_overrides = {
         mocha = {
+          white = "#ffffff",
           text = "#cfcfcf",
           base = "#161616",
           crust = "#000000",
@@ -62,6 +63,7 @@ return {
       highlight_overrides = {
         all = function(colors)
           return {
+            EndOfBuffer = { fg = colors.text },
             WinSeparator = { fg = colors.text },
             TSVariable = { fg = colors.text },
             TSVariableBuiltin = { fg = colors.mauve },
