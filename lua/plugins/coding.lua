@@ -43,7 +43,7 @@ return {
     },
     config = true,
     opts = {
-      disable_context_highlighting = true,
+      disable_context_highlighting = false,
       disable_line_numbers = false,
       integrations = {
         -- If enabled, use telescope for menu selection rather than vim.ui.select.
