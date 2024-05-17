@@ -138,7 +138,7 @@ return {
         blue = "#51afef",
         red = "#ec5f67",
       }
-      opts.options.theme = "16color"
+      -- opts.options.theme = "16color"
 
       local function ins_left(component)
         table.insert(opts.sections.lualine_c, component)

@@ -16,8 +16,8 @@ vim.cmd([[
    \| highlight! LineNr guibg=#202020
    \| highlight! TreesitterContext guibg=#202020
    \| highlight! LspInlayHint guifg=#7d8299 guibg=#262626
-   \| highlight! TelescopeBorder guifg=#ffffff
-   \| highlight! TelescopePromptBorder guifg=#ffffff
+   " \| highlight! TelescopeBorder guifg=#ffffff
+   " \| highlight! TelescopePromptBorder guifg=#ffffff
    " \| highlight! TelescopeNormal guibg=#3d3d3d
 ]])
 
