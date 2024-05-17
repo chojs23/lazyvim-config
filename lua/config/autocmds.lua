@@ -4,6 +4,9 @@ require("config/commands")
 -- vim.api.nvim_set_hl(0, "NeogitDiffContextHighlight", { guifg = "#eeeeee" })
 
 vim.cmd([[
+  set fillchars=eob:~
+]])
+vim.cmd([[
    augroup ColorSchemeOverride
    au!
    au ColorScheme *
@@ -13,11 +16,12 @@ vim.cmd([[
    \| highlight! Pmenu guibg=#333333
    \| highlight! PmenuSel guibg=#171717
    \| highlight! FloatBorder guifg=#ffffff
-   \| highlight! LineNr guibg=#202020
+   \| highlight! LineNr guifg=#cfcfcf guibg=#202020
    \| highlight! TreesitterContext guibg=#202020
    \| highlight! LspInlayHint guifg=#7d8299 guibg=#262626
-   " \| highlight! TelescopeBorder guifg=#ffffff
-   " \| highlight! TelescopePromptBorder guifg=#ffffff
+   \| highlight! EndOfBuffer guifg=#cfcfcf
+   \| highlight! TelescopeBorder guifg=#ffffff
+   \| highlight! TelescopePromptBorder guifg=#ffffff
    " \| highlight! TelescopeNormal guibg=#3d3d3d
 ]])
 

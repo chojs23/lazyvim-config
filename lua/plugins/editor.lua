@@ -32,13 +32,13 @@ return {
       },
     },
   },
-  {
-    "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      height = 8,
-    },
-  },
+  -- {
+  --   "folke/trouble.nvim",
+  --   dependencies = { "nvim-tree/nvim-web-devicons" },
+  --   opts = {
+  --     height = 8,
+  --   },
+  -- },
   {
     "folke/flash.nvim",
     event = "VeryLazy",

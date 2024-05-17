@@ -33,7 +33,7 @@ return {
         mocha = {
           white = "#ffffff",
           text = "#cfcfcf",
-          base = "#161616",
+          base = "#101010",
           crust = "#000000",
           mantle = "#151515",
           -- surface0 = "#3e4451",
@@ -217,17 +217,9 @@ return {
     },
   },
   {
-    "EdenEast/nightfox.nvim",
-    opts = {
-      groups = {
-        all = { EndOfBuffer = { fg = "#ffffff" } }, -- tilde
-      },
-    },
-  },
-  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "cyberdream",
+      colorscheme = "catppuccin",
     },
   },
 }
