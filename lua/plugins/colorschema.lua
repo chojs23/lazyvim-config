@@ -81,59 +81,60 @@ return {
   {
     "folke/tokyonight.nvim",
     priority = 1000,
-    enabled = false,
+    enabled = true,
     opts = {
-      style = "night",
+      style = "moon",
       styles = {
         comments = { italic = true },
         keywords = { italic = true },
       },
       sidebars = { "qf", "vista_kind", "terminal", "packer", "help" },
-      transparent = false,
-      on_colors = function(colors)
-        colors.bg = "#000000"
-        colors.bg_dark = "#000000"
-        colors.bg_float = "#000000"
-        colors.bg_highlight = "#121212"
-        colors.bg_statusline = "#000000"
-        colors.bg_sidebar = "#000000"
-        colors.fg_gutter = "#2c2c2c"
-        colors.border = "#e0e0e0"
-        colors.git = {
-          add = "#24bf55",
-          change = "#FFCB6B",
-          delete = "#ba1a37",
-          ignore = "#545c7e",
-        }
-        colors.gitSigns = {
-          add = "#24bf55",
-          change = "#FFCB6B",
-          delete = "#ba1a37",
-        }
-      end,
-      on_highlights = function(hl, colors)
-        hl.LineNr = {
-          fg = colors.dark5,
-        }
-        hl.CursorLineNr = {
-          fg = colors.dark5,
-        }
-        hl.NeoTreeGitAdded = {
-          fg = "#24bf55",
-        }
-        hl.NeoTreeGitDeleted = {
-          fg = "#ba1a37",
-        }
-        hl.NeoTreeGitModified = {
-          fg = "#FFCB6B",
-        }
-      end,
+      transparent = true,
+      -- on_colors = function(colors)
+      --   colors.bg = "#000000"
+      --   colors.bg_dark = "#000000"
+      --   colors.bg_float = "#000000"
+      --   colors.bg_highlight = "#121212"
+      --   colors.bg_statusline = "#000000"
+      --   colors.bg_sidebar = "#000000"
+      --   colors.fg_gutter = "#2c2c2c"
+      --   colors.border = "#e0e0e0"
+      --   colors.git = {
+      --     add = "#24bf55",
+      --     change = "#FFCB6B",
+      --     delete = "#ba1a37",
+      --     ignore = "#545c7e",
+      --   }
+      --   colors.gitSigns = {
+      --     add = "#24bf55",
+      --     change = "#FFCB6B",
+      --     delete = "#ba1a37",
+      --   }
+      -- end,
+      -- on_highlights = function(hl, colors)
+      --   hl.LineNr = {
+      --     fg = colors.dark5,
+      --   }
+      --   hl.CursorLineNr = {
+      --     fg = colors.dark5,
+      --   }
+      --   hl.NeoTreeGitAdded = {
+      --     fg = "#24bf55",
+      --   }
+      --   hl.NeoTreeGitDeleted = {
+      --     fg = "#ba1a37",
+      --   }
+      --   hl.NeoTreeGitModified = {
+      --     fg = "#FFCB6B",
+      --   }
+      -- end,
     },
   },
   {
     "scottmckendry/cyberdream.nvim",
     lazy = false,
     priority = 1000,
+    config = false,
     config = function()
       require("cyberdream").setup({
         -- Recommended - see "Configuring" below for more config options
@@ -184,37 +185,6 @@ return {
         },
       })
     end,
-  },
-  {
-    "miikanissi/modus-themes.nvim",
-    priority = 1000,
-    opts = {
-      -- Theme comes in two styles `modus_operandi` and `modus_vivendi`
-      -- `auto` will automatically set style based on background set with vim.o.background
-      style = "auto",
-      variant = "default", -- Theme comes in four variants `default`, `tinted`, `deuteranopia`, and `tritanopia`
-      transparent = false, -- Transparent background (as supported by the terminal)
-      dim_inactive = false, -- "non-current" windows are dimmed
-      styles = {
-        -- Style to be applied to different syntax groups
-        -- Value is any valid attr-list value for `:help nvim_set_hl`
-        comments = { italic = true },
-        keywords = { italic = true },
-        functions = {},
-        variables = {},
-      },
-
-      --- You can override specific color groups to use other groups or a hex color
-      --- function will be called with a ColorScheme table
-      ---@param colors ColorScheme
-      on_colors = function(colors) end,
-
-      --- You can override specific highlights to use other groups or a hex color
-      --- function will be called with a Highlights and ColorScheme table
-      ---@param highlights Highlights
-      ---@param colors ColorScheme
-      on_highlights = function(highlights, colors) end,
-    },
   },
   {
     "polirritmico/monokai-nightasty.nvim",
@@ -286,13 +256,32 @@ return {
       -- Default to dark theme
       vim.o.background = "dark" -- dark | light
 
-      require("monokai-nightasty").load(opts)
+      -- require("monokai-nightasty").load(opts)
     end,
+  },
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   config = function()
+  --     require("rose-pine").setup({
+  --       disable_background = true,
+  --       styles = {
+  --         transparency = true,
+  --       },
+  --     })
+  --
+  --     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  --     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  --   end,
+  -- },
+  { "rktjmp/lush.nvim" },
+  {
+    "kartikp10/noctis.nvim",
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "monokai-nightasty",
+      colorscheme = "noctis",
     },
   },
 }

@@ -15,7 +15,7 @@ return {
       },
     },
     inlay_hints = {
-      enabled = true,
+      enabled = false,
     },
     servers = {
       -- eslint = {},
@@ -28,7 +28,7 @@ return {
           },
         },
       },
-      tsserver = {
+      tsserver = { -- deprecated
         settings = {
           typescript = {
             inlayHints = {
