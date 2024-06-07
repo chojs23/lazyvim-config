@@ -274,14 +274,13 @@ return {
   --     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
   --   end,
   -- },
-  { "rktjmp/lush.nvim" },
-  {
-    "kartikp10/noctis.nvim",
-  },
+  { "agude/vim-eldar" },
+  { "bignimbus/pop-punk.vim" },
+  { "iagorrr/noctishc.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "noctis",
+      colorscheme = "noctishc",
     },
   },
 }
