@@ -277,10 +277,11 @@ return {
   { "agude/vim-eldar" },
   { "bignimbus/pop-punk.vim" },
   { "iagorrr/noctishc.nvim" },
+  { "RRethy/base16-nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "noctishc",
+      colorscheme = "base16-da-one-black",
     },
   },
 }

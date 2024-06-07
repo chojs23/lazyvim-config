@@ -13,9 +13,17 @@ return {
     build = function()
       vim.fn["mkdp#util#install"]()
     end,
-
+  },
+  {
+    "gbprod/yanky.nvim",
+    desc = "Better Yank/Paste",
+    event = "LazyFile",
+    opts = {
+      highlight = { timer = 150 },
+    },
     keys = {
-      { "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown preview" },
+        -- stylua: ignore
+    { "<leader>p", function() require("telescope").extensions.yank_history.yank_history({ }) end, desc = "Open Yank History" ,mode= {"n","x"}},
     },
   },
   {

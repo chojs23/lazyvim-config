@@ -3,12 +3,19 @@ require("config/commands")
 -- vim.highlight.create("NeogitDiffContextHighlight", { guifg = "#eeeeee" })
 -- vim.api.nvim_set_hl(0, "NeogitDiffContextHighlight", { guifg = "#eeeeee" })
 
+vim.cmd([[
+augroup ColorSchemeOverride
+au!
+au ColorScheme *
+\ highlight! LspInlayHint guifg=#7d8299 guibg=#262626
+]])
+
 -- vim.cmd([[
 --    augroup ColorSchemeOverride
 --    au!
 --    au ColorScheme *
 --    \ highlight! NeogitDiffContextHighlight guifg=#dddddd guibg=#151515
---    \| highlight! Visual guibg=#323232
+--    \| highlight! Visual guibg=#323232 guifg=#ffffff
 --    \| highlight! CursorLine guibg=#1e1e1e
 --    \| highlight! Pmenu guibg=#333333
 --    \| highlight! PmenuSel guibg=#171717
