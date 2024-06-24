@@ -86,6 +86,7 @@ return {
   {
     "stevearc/oil.nvim",
     opts = {
+      skip_confirm_for_simple_edits = true,
       keymaps = {
         ["<leader>o"] = "actions.close",
         ["-"] = "actions.parent",

@@ -23,6 +23,8 @@ return {
         ghost_text = false,
       }
 
+      opts.mapping = {}
+
       -- cmp priority
       local types = require("cmp.types")
       local function deprio(kind)
