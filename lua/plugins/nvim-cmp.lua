@@ -23,7 +23,9 @@ return {
         ghost_text = false,
       }
 
-      opts.mapping = {}
+      opts.mapping = {
+        ["<C-Space>"] = cmp.mapping.complete(),
+      }
 
       -- cmp priority
       local types = require("cmp.types")
