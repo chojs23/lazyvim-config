@@ -4,7 +4,6 @@ return {
     opts.ui = {
       border = "rounded",
     }
-    table.insert(opts.ensure_installed, "typescript-language-server")
     table.insert(opts.ensure_installed, "prettierd")
   end,
 }
