@@ -77,7 +77,7 @@ return {
           else
             fallback()
           end
-        end, { "i", "s", "c" }),
+        end, { "i", "s" }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
@@ -88,7 +88,7 @@ return {
           else
             fallback()
           end
-        end, { "i", "s", "c" }),
+        end, { "i", "s" }),
         ["<Enter>"] = cmp.mapping({
           i = function(fallback)
             if cmp.visible() and cmp.get_active_entry() then
