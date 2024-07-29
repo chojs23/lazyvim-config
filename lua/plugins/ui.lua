@@ -61,7 +61,7 @@ return {
       },
       lsp = {
         hover = {
-          silent = true,
+          silent = false,
         },
       },
       messages = {

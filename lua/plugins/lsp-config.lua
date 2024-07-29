@@ -54,24 +54,26 @@ return {
           },
         },
       },
-      rust_analyzer = {
-        on_attach = function(bufnr, client)
-          vim.lsp.inlay_hint.enable(false)
-        end,
-        settings = {
-          ["rust-analyzer"] = {
-            cargo = {
-              autoreload = false,
-            },
-            procMacro = {
-              enable = true,
-            },
-            inlayHints = {
-              enable = false,
-            },
-          },
-        },
-      },
+      --   rust_analyzer = {
+      --     mason = false,
+      --     on_attach = function(bufnr, client)
+      --       vim.lsp.inlay_hint.enable(false)
+      --     end,
+      --     settings = {
+      --       ["rust-analyzer"] = {
+      --         cargo = {
+      --           autoreload = false,
+      --         },
+      --         procMacro = {
+      --           enable = true,
+      --         },
+      --         inlayHints = {
+      --           enable = false,
+      --         },
+      --       },
+      --     },
+      --   },
+      -- },
     },
     setup = {},
   },
