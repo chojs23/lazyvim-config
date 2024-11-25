@@ -116,6 +116,14 @@ return {
     end,
   },
   {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = {
+      notifier = { enabled = false },
+    },
+  },
+  {
     "nvim-lualine/lualine.nvim",
     optional = true,
     event = "VeryLazy",
