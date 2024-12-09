@@ -21,8 +21,20 @@ vim.keymap.set("i", "<F1>", "")
 
 vim.keymap.set("i", "<ESC>", "<ESC>l")
 
--- NeoTree postion current
-vim.keymap.set("n", "<leader>n", ":Neotree position=current<CR>", { silent = true })
+local function toggle_netrw()
+  for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.api.nvim_buf_is_loaded(bufnr) and vim.bo[bufnr].filetype == "netrw" then
+      vim.cmd("bwipeout " .. bufnr)
+      return
+    end
+  end
+  vim.cmd("enew | Explore")
+end
+
+vim.keymap.set("n", "<leader>n", toggle_netrw, { silent = true })
+
+-- Netrw postion current
+-- vim.keymap.set("n", "<leader>n", ":Explore<CR>", { silent = true })
 
 -- Resize window using <ctrl> arrow keys
 -- map("n", "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })

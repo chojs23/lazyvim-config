@@ -12,7 +12,9 @@ return {
   },
   },
   {
-    dir = "utils/term",
+    name = "bottom",
+    dir = "~/.config/nvim/lua/utils/btm",
+    dev = true,
     event = "VeryLazy",
     keys = {
       {
