@@ -128,12 +128,9 @@ return {
     optional = true,
     event = "VeryLazy",
     opts = function(_, opts)
-      local Util = require("lazyvim.util")
+      local Snacks = require("snacks")
       local colors = {
-        [""] = Util.ui.fg("Special"),
-        ["Normal"] = Util.ui.fg("Special"),
-        ["Warning"] = Util.ui.fg("DiagnosticError"),
-        ["InProgress"] = Util.ui.fg("DiagnosticWarn"),
+        -- [""] = Snacks.util.color("Special"),
         bg = "#202328",
         fg = "#bbc2cf",
         yellow = "#ECBE7B",
@@ -207,7 +204,7 @@ return {
       ins_right({
         "fileformat",
         fmt = string.upper,
-        icons_enabled = true,
+        icons_enabled = false,
         color = { fg = colors.green, gui = "bold" },
       })
 

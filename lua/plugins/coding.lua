@@ -31,6 +31,56 @@ return {
       codewindow.apply_default_keybinds()
     end,
   },
+  --   {
+  --     "saghen/blink.cmp",
+  --     opts = {
+  --       completion = {
+  --         ghost_text = {
+  --           enabled = false,
+  --         },
+  --         list = {
+  --           selection = "auto_insert",
+  --         },
+  --         menu = {
+  --           border = "rounded",
+  --           winhighlight = "Normal:NormalFloat,FloatBorder:NormalFloat,CursorLine:BlinkCmpMenuSelection,Search:None",
+  --         },
+  --         documentation = {
+  --           auto_show = true,
+  --           window = {
+  --             border = "rounded",
+  --           },
+  --         },
+  --       },
+  --       keymap = {
+  --         preset = "enter",
+  --         ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+  --         ["enter"] = {
+  --           function(cmp)
+  --             if cmp.snippet_active() then
+  --               return cmp.accept()
+  --             else
+  --               return cmp.select_and_accept()
+  --             end
+  --           end,
+  --           "snippet_forward",
+  --           "fallback",
+  --         },
+  --         ["<C-p>"] = { "select_prev", "fallback" },
+  --         ["<C-n>"] = { "select_next", "fallback" },
+  --
+  --         ["<S-Tab>"] = { "select_prev", "fallback" },
+  --         ["<Tab>"] = { "select_next", "fallback" },
+  --
+  --         ["<C-b>"] = { "scroll_documentation_up", "fallback" },
+  --         ["<C-f>"] = { "scroll_documentation_down", "fallback" },
+  --         ["<C-y>"] = {},
+  --       },
+  --     },
+  --     config = function(_, opts)
+  --       require("blink.cmp").setup(opts)
+  --     end,
+  --   },
   {
     "gbprod/yanky.nvim",
     desc = "Better Yank/Paste",
@@ -40,7 +90,7 @@ return {
     },
     keys = {
         -- stylua: ignore
-    { "<leader>p", function() require("telescope").extensions.yank_history.yank_history({ }) end, desc = "Open Yank History" ,mode= {"n","x"}},
+    { "<leader>y", function() require("telescope").extensions.yank_history.yank_history({ }) end, desc = "Open Yank History" ,mode= {"n","x"}},
     },
   },
   {

@@ -4,7 +4,7 @@ return {
     dependencies = {
       "hrsh7th/cmp-emoji",
     },
-    ---@param opts cmp.ConfigSchema
+    -- @param opts cmp.ConfigSchema
     opts = function(_, opts)
       local cmp = require("cmp")
 
